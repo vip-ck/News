@@ -13,3 +13,13 @@
  *= require_tree .
  *= require_self
  */
+@import "bootstrap/scss/bootstrap";
+
+
+li.nav-item.dropdown {
+  margin-left: 50rem;
+}
+
+.main {
+  margin-top: 50px;
+}

@@ -1,28 +1,28 @@
-nav.navbar.navbar-expand-lg.navbar-light.bg-light
-  .container-fluid
-    a.navbar-brand href="#"  Navbar
-    button.navbar-toggler aria-controls="navbarSupportedContent" aria-expanded="false" aria-label=("Toggle navigation") data-bs-target="#navbarSupportedContent" data-bs-toggle="collapse" type="button" 
+nav.navbar.navbar-expand-lg.navbar-dark.bg-dark
+  .container
+    a.navbar-brand href="#"  News
+    button.navbar-toggler aria-controls="navbarNavDropdown" aria-expanded="false" aria-label=("Toggle navigation") data-bs-target="#navbarNavDropdown" data-bs-toggle="collapse" type="button" 
       span.navbar-toggler-icon
-    #navbarSupportedContent.collapse.navbar-collapse
-      ul.navbar-nav.me-auto.mb-2.mb-lg-0
+    #navbarNavDropdown.collapse.navbar-collapse
+      ul.navbar-nav
+        li.nav-item 
+        = link_to 'Home', root_path, class: 'nav-link'
         li.nav-item
-          a.nav-link.active aria-current="page" href="#"  Home
-        li.nav-item
-          a.nav-link href="#"  Link
+          a.nav-link href="#"  All news
         li.nav-item.dropdown
-          a#navbarDropdown.nav-link.dropdown-toggle aria-expanded="false" data-bs-toggle="dropdown" href="#" role="button" 
-            | Dropdown
-          ul.dropdown-menu aria-labelledby="navbarDropdown" 
+          - if user_signed_in? 
+            a#navbarDropdownMenuLink.nav-link.dropdown-toggle aria-expanded="false" data-bs-toggle="dropdown" href="#" role="button"
+              = "Hello #{current_user.name}"
+            ul.dropdown-menu aria-labelledby="navbarDropdownMenuLink" 
+              li
+                = link_to 'Edit profile', edit_user_registration_path, class: 'dropdown-item'
+              li
+                = link_to 'Exit', destroy_user_session_path, method: :delete, class: 'dropdown-item'
+          - else
+            a#navbarDropdownMenuLink.nav-link.dropdown-toggle aria-expanded="false" data-bs-toggle="dropdown" href="#" role="button"
+              | Login/Register
+          ul.dropdown-menu aria-labelledby="navbarDropdownMenuLink" 
             li
-              a.dropdown-item href="#"  Action
+              = link_to 'Login', new_user_session_path, class: 'dropdown-item'
             li
-              a.dropdown-item href="#"  Another action
-            li
-              hr.dropdown-divider/
-            li
-              a.dropdown-item href="#"  Something else here
-        li.nav-item
-          a.nav-link.disabled Disabled
-      form.d-flex
-        input.form-control.me-2 aria-label="Search" placeholder="Search" type="search" /
-        button.btn.btn-outline-success type="submit"  Search
+              = link_to 'Registration', new_user_registration_path, class: 'dropdown-item'
