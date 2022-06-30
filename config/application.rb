@@ -21,6 +21,7 @@ Bundler.require(*Rails.groups)
 
 module News
   class Application < Rails::Application
+    config.active_storage.variant_processor = :vips
     # Initialize configuration defaults for originally generated Rails version.
     config.load_defaults 6.1
     config.i18n.available_locales = %i[en ru]
