@@ -6,9 +6,9 @@ nav.navbar.navbar-expand-lg.navbar-dark.bg-dark
     #navbarNavDropdown.collapse.navbar-collapse
       ul.navbar-nav
         li.nav-item 
-        = link_to 'Home', root_path, class: 'nav-link'
+          = link_to 'Home', root_path, class: 'nav-link'
         li.nav-item
-          a.nav-link href="#"  All news
+          = link_to 'All news', posts_path, class: 'nav-link'
         li.nav-item.dropdown
           - if user_signed_in? 
             a#navbarDropdownMenuLink.nav-link.dropdown-toggle aria-expanded="false" data-bs-toggle="dropdown" href="#" role="button"

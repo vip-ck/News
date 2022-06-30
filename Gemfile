@@ -15,6 +15,8 @@ gem 'rails', '~> 6.1.6'
 gem 'sass-rails', '>= 6'
 gem 'slim-rails'
 gem 'webpacker', '~> 5.0'
+gem 'image_processing', '~> 1.2'
+
 group :development, :test do
   gem 'byebug', platforms: %i[mri mingw x64_mingw]
 end
