@@ -8,10 +8,9 @@ import Rails from "@rails/ujs"
 import  'bootstrap' 
 import { Tooltip, Popover } from "bootstrap"
 
-require("@rails/ujs").start()
-require("turbolinks").start()
+
+
 require("@rails/activestorage").start()
-require("channels")
 require("bootstrap")
 require("trix")
 require("@rails/actiontext")
