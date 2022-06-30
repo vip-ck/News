@@ -6,12 +6,12 @@ import "trix"
 import "@rails/actiontext"
 import Rails from "@rails/ujs"
 import  'bootstrap' 
-import  './stylesheets/application.scss'
+// import  './stylesheets/application.scss'
 
-require("@rails/ujs").start()
-require("turbolinks").start()
+// require("@rails/ujs").start()
+// require("turbolinks").start()
 require("@rails/activestorage").start()
-require("channels")
+// require("channels")
 require("bootstrap");
 
 var jQuery = require("jquery");
