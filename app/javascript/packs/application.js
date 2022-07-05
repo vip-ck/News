@@ -8,6 +8,7 @@ import "@rails/actiontext"
 import Rails from "@rails/ujs"
 import  'bootstrap' 
 import { Tooltip, Popover } from "bootstrap"
+import "src/like_news.js"
 
 
 

@@ -29,3 +29,11 @@ li.nav-item.dropdown {
 .main {
   margin-top: 50px;
 }
+
+.like {
+  color: black;
+  opacity: 0.5;
+  &--red {
+    color: red;
+}
+}
