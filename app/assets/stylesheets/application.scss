@@ -17,6 +17,9 @@
 
 
 @import "bootstrap/scss/bootstrap";
+@import "font-awesome";
+
+
 
 
 li.nav-item.dropdown {
@@ -25,4 +28,13 @@ li.nav-item.dropdown {
 
 .main {
   margin-top: 50px;
+}
+
+.like {
+  font-size: 24px;
+  color: black;
+  opacity: 0.5;
+  &--red {
+    color: red;
+}
 }

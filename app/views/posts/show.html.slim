@@ -8,6 +8,9 @@ p
   strong Content:
   == @post.content
 
+br
+p
+  = fa_icon "heart", class: 'like', id: 'like'
 
 br
 => link_to "Edit", edit_post_path(@post)

@@ -2,11 +2,13 @@
 // present in this directory. You're encouraged to place your actual application logic in
 // a relevant structure within app/javascript and only use these pack files to reference
 // that code so it'll be compiled.
+
 import "trix"
 import "@rails/actiontext"
 import Rails from "@rails/ujs"
 import  'bootstrap' 
 import { Tooltip, Popover } from "bootstrap"
+import "src/like_news.js"
 
 
 
@@ -16,6 +18,7 @@ require("trix")
 require("@rails/actiontext")
 require("@popperjs/core")
 require("../stylesheets/application.scss")
+
 
 Rails.start()
 
