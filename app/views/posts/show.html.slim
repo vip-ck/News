@@ -10,7 +10,9 @@ p
 
 br
 p
-  = fa_icon "heart", class: 'like', id: 'like'
+  = fa_icon "heart", class: 'like', id: 'like' , about_counter: 'like'
+  =< session[:about_counter]
+ 
 
 br
 => link_to "Edit", edit_post_path(@post)

@@ -6,6 +6,9 @@ class PostsController < ApplicationController
   # GET /posts
   def index
     @posts = Post.all
+    session[:about_counter] ||= 0
+    session[:about_counter] += 1
+    
   end
 
   # GET /posts/1
