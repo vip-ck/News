@@ -6,8 +6,7 @@ class PostsController < ApplicationController
   # GET /posts
   def index
     @posts = Post.all
-    session[:about_counter] ||= 0
-    session[:about_counter] += 1
+    
     
   end
 
@@ -46,6 +45,16 @@ class PostsController < ApplicationController
   def destroy
     @post.destroy
     redirect_to posts_url, notice: 'Post was successfully destroyed.'
+  end
+# POST /posts/1/like
+  def like
+    respond_to do |format|
+      if @post.like!
+        format.json { head :ok }
+      else
+        format.json { render json: @post.errors, status: :unprocessable_entity }
+      end
+    end
   end
 
   private
