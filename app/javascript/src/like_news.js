@@ -10,5 +10,6 @@ const handleLike = (event) => {
 
 document.addEventListener('DOMContentLoaded', function () {
   const iconElement = document.getElementById("like");
+  
   iconElement.addEventListener("click", handleLike);
 })
