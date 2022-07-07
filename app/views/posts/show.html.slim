@@ -10,8 +10,8 @@ p
 
 br
 p
-  = fa_icon "heart", class: 'like', id: 'like' , about_counter: 'like'
-  =< session[:about_counter]
+  = fa_icon "heart", class: 'like', id: 'like' , about_counter: 'like', "data-post-id" => "#{@post.id}"
+
  
 
 br

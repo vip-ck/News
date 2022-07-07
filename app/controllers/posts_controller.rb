@@ -1,13 +1,11 @@
 # frozen_string_literal: true
 
 class PostsController < ApplicationController
-  before_action :set_post, only: %i[show edit update destroy]
+  before_action :set_post, only: %i[show edit update like destroy]
 
   # GET /posts
   def index
     @posts = Post.all
-    
-    
   end
 
   # GET /posts/1
@@ -46,7 +44,8 @@ class PostsController < ApplicationController
     @post.destroy
     redirect_to posts_url, notice: 'Post was successfully destroyed.'
   end
-# POST /posts/1/like
+
+  # POST /posts/1/like
   def like
     respond_to do |format|
       if @post.like!
